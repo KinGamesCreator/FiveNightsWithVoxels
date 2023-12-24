@@ -1,0 +1,97 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://scenes/winscreen/winscreen.gd" type="Script" id=1]
+[ext_resource path="res://assets/fonts/monogram-extended.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/resources/resizedLabel.gd" type="Script" id=3]
+[ext_resource path="res://assets/sonidos/alarm.ogg" type="AudioStream" id=4]
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 150
+font_data = ExtResource( 2 )
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("ResizeLabel:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("win_music:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "anim"
+length = 7.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("ResizeLabel:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.8, 1.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.411, 0.725, 1.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("win_music:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[node name="winscreen" type="Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 4 )
+script = ExtResource( 1 )
+
+[node name="ResizeLabel" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 1 )
+text = "6 AM"
+align = 1
+valign = 1
+percent_visible = 0.0
+script = ExtResource( 3 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 8.0
+one_shot = true
+
+[node name="textAnim" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 2 )
+anims/anim = SubResource( 3 )
+
+[node name="win_music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+
+[connection signal="timeout" from="Timer" to="." method="winTimeout"]

@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/BONNIE_OFFICE.obj-b0d415c81ec00f109bd43799eb45c3b1.mesh"
+
+[deps]
+
+files=[ "res://.import/BONNIE_OFFICE.obj-b0d415c81ec00f109bd43799eb45c3b1.mesh" ]
+
+source_file="res://assets/models/animatronics/bonnie/BONNIE_OFFICE.obj"
+dest_files=[ "res://.import/BONNIE_OFFICE.obj-b0d415c81ec00f109bd43799eb45c3b1.mesh", "res://.import/BONNIE_OFFICE.obj-b0d415c81ec00f109bd43799eb45c3b1.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

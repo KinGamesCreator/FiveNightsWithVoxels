@@ -1,0 +1,108 @@
+[gd_scene format=2]
+
+[node name="Spatial" type="Spatial"]
+
+[node name="trash" type="Spatial" parent="."]
+visible = false
+
+[node name="SpotLight" type="SpotLight" parent="trash"]
+transform = Transform( 0.970778, -0.0214011, 0.239025, -0.209607, 0.409395, 0.887953, -0.116859, -0.912106, 0.392946, -0.106061, 8.58464, -40.9093 )
+light_bake_mode = 2
+light_cull_mask = 4294966273
+spot_range = 18.6178
+spot_angle = 37.3038
+
+[node name="SpotLight2" type="SpotLight" parent="trash"]
+transform = Transform( -0.926573, 0.206882, -0.314107, -0.187937, 0.468735, 0.863115, 0.325796, 0.858771, -0.395436, 11.5207, 8.58464, -50.4027 )
+light_bake_mode = 2
+light_cull_mask = 4294966273
+spot_range = 18.6178
+spot_angle = 33.4529
+
+[node name="SpotLight3" type="SpotLight" parent="trash"]
+transform = Transform( 0.820004, 0.558585, -0.124803, -0.187937, 0.468735, 0.863115, 0.540623, -0.684302, 0.489344, -1.43322, 8.58464, -53.1651 )
+light_bake_mode = 2
+light_cull_mask = 4294966273
+spot_range = 18.6178
+spot_angle = 33.4529
+
+[node name="SpotLight4" type="SpotLight" parent="trash"]
+transform = Transform( 0.514698, 0.795449, -0.319916, -0.187937, 0.468735, 0.863115, 0.83652, -0.384119, 0.390751, -18.3659, 8.58464, -49.8409 )
+light_bake_mode = 2
+light_cull_mask = 4294966273
+spot_range = 14.7914
+spot_angle = 31.3909
+
+[node name="SpotLight5" type="SpotLight" parent="trash"]
+transform = Transform( 0.981152, 0.129823, 0.143135, -0.187937, 0.468735, 0.863115, 0.0449592, -0.873747, 0.484299, -12.079, 8.58464, -36.2436 )
+light_bake_mode = 2
+light_cull_mask = 4294966273
+spot_range = 14.7914
+spot_angle = 31.3909
+
+[node name="SpotLight6" type="SpotLight" parent="trash"]
+transform = Transform( 0.981152, 0.129823, 0.143135, -0.187937, 0.468735, 0.863115, 0.0449592, -0.873747, 0.484299, -6.42982, 8.58464, -27.8068 )
+light_bake_mode = 2
+light_cull_mask = 4294966273
+spot_range = 14.7914
+spot_angle = 31.3909
+
+[node name="SpotLight7" type="SpotLight" parent="trash"]
+transform = Transform( 0.966094, 0.257721, 0.0155465, -0.19315, 0.681462, 0.705905, 0.171332, -0.684974, 0.708135, 0.160704, 8.58464, -18.0293 )
+light_bake_mode = 2
+light_cull_mask = 4294966273
+spot_range = 14.7914
+spot_angle = 19.2999
+
+[node name="SpotLight11" type="SpotLight" parent="trash"]
+transform = Transform( 0.874193, 0.4462, -0.191553, -0.19315, 0.681462, 0.705905, 0.445511, -0.580099, 0.681913, 4.7979, 8.58464, -18.0293 )
+light_bake_mode = 2
+light_cull_mask = 4294966273
+spot_range = 14.7914
+spot_angle = 19.2999
+
+[node name="SpotLight9" type="SpotLight" parent="trash"]
+transform = Transform( -0.915441, -0.00686167, 0.402393, 0.346807, 0.493832, 0.797405, -0.204186, 0.86953, -0.449695, 2.92792, 8.58464, -18.0293 )
+light_bake_mode = 2
+light_cull_mask = 4294966273
+spot_range = 11.2856
+spot_angle = 23.8915
+
+[node name="SpotLight10" type="SpotLight" parent="trash"]
+transform = Transform( -0.846759, -0.385414, -0.366682, -0.502212, 0.351818, 0.789941, -0.175449, 0.853042, -0.491464, 3.53906, 8.58464, -18.0293 )
+light_bake_mode = 2
+light_cull_mask = 4294966273
+spot_range = 11.2856
+spot_angle = 23.8915
+
+[node name="SpotLight8" type="SpotLight" parent="trash"]
+transform = Transform( 0.966094, 0.257721, 0.0155465, -0.19315, 0.681462, 0.705905, 0.171332, -0.684974, 0.708135, 0.160704, 8.58464, -21.3791 )
+light_bake_mode = 2
+light_cull_mask = 4294966273
+spot_range = 14.7914
+spot_angle = 19.2999
+
+[node name="SpotLight12" type="SpotLight" parent="trash"]
+transform = Transform( 0.888803, 0.426264, -0.16831, -0.19315, 0.681462, 0.705906, 0.415599, -0.594902, 0.688018, 4.42868, 8.58464, -21.5375 )
+light_bake_mode = 2
+light_cull_mask = 4294966273
+spot_range = 14.7914
+spot_angle = 19.2999
+
+[node name="OmniLight2" type="OmniLight" parent="trash"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.24545, 1.20661 )
+light_energy = 1.5
+light_bake_mode = 2
+omni_range = 4.21634
+
+[node name="SpotLight15" type="SpotLight" parent="trash"]
+transform = Transform( 0.788358, 0.097438, 0.607451, -0.170918, -0.913821, 0.3684, 0.590998, -0.394256, -0.703764, -3.63698, 3.99429, -1.24056 )
+light_bake_mode = 2
+spot_range = 17.8514
+spot_angle = 38.8347
+
+[node name="SpotLight16" type="SpotLight" parent="trash"]
+transform = Transform( 0.675893, -0.503865, -0.537856, -0.349147, -0.861611, 0.368406, -0.649049, -0.0612118, -0.75828, 3.637, 3.994, -1.241 )
+light_bake_mode = 2
+spot_range = 17.8514
+spot_angle = 38.8347

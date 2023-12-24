@@ -1,0 +1,740 @@
+[gd_scene load_steps=51 format=2]
+
+[ext_resource path="res://scenes/menu/Menu.gd" type="Script" id=1]
+[ext_resource path="res://scenes/game/customNight.gd" type="Script" id=2]
+[ext_resource path="res://assets/fonts/monogram-extended.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/textures/minimap/static/frame_3_delay-0.01s.png" type="Texture" id=4]
+[ext_resource path="res://assets/resources/resizedButton.gd" type="Script" id=5]
+[ext_resource path="res://assets/resources/resizedLabel.gd" type="Script" id=6]
+[ext_resource path="res://assets/textures/minimap/static/frame_6_delay-0.01s.png" type="Texture" id=7]
+[ext_resource path="res://assets/textures/minimap/static/frame_1_delay-0.01s.png" type="Texture" id=8]
+[ext_resource path="res://assets/textures/minimap/static/frame_0_delay-0.01s.png" type="Texture" id=9]
+[ext_resource path="res://assets/textures/minimap/static/frame_4_delay-0.01s.png" type="Texture" id=10]
+[ext_resource path="res://assets/textures/minimap/static/frame_2_delay-0.01s.png" type="Texture" id=11]
+[ext_resource path="res://assets/textures/minimap/static/frame_5_delay-0.01s.png" type="Texture" id=12]
+[ext_resource path="res://assets/textures/menu/MENU2.png" type="Texture" id=13]
+[ext_resource path="res://assets/textures/menu/MENU1.png" type="Texture" id=14]
+[ext_resource path="res://assets/textures/menu/title.png" type="Texture" id=15]
+[ext_resource path="res://assets/textures/customNight/customChica.tres" type="Texture" id=16]
+[ext_resource path="res://assets/textures/customNight/customBonnie.tres" type="Texture" id=17]
+[ext_resource path="res://assets/sonidos/static.ogg" type="AudioStream" id=18]
+[ext_resource path="res://assets/sonidos/menu_ambience.ogg" type="AudioStream" id=19]
+[ext_resource path="res://assets/textures/customNight/customFoxy.tres" type="Texture" id=20]
+[ext_resource path="res://assets/textures/customNight/customFreddy.tres" type="Texture" id=21]
+
+[sub_resource type="AnimatedTexture" id=1]
+flags = 4
+frames = 2
+fps = 24.0
+frame_0/texture = ExtResource( 14 )
+frame_0/delay_sec = 5.0
+frame_1/texture = ExtResource( 13 )
+frame_1/delay_sec = 0.0
+
+[sub_resource type="AnimatedTexture" id=2]
+flags = 4
+frames = 7
+fps = 30.0
+frame_0/texture = ExtResource( 9 )
+frame_1/texture = ExtResource( 8 )
+frame_1/delay_sec = 0.0
+frame_2/texture = ExtResource( 11 )
+frame_2/delay_sec = 0.0
+frame_3/texture = ExtResource( 4 )
+frame_3/delay_sec = 0.0
+frame_4/texture = ExtResource( 10 )
+frame_4/delay_sec = 0.0
+frame_5/texture = ExtResource( 12 )
+frame_5/delay_sec = 0.0
+frame_6/texture = ExtResource( 7 )
+frame_6/delay_sec = 0.0
+
+[sub_resource type="DynamicFont" id=3]
+size = 150
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 150
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 50
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 150
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 150
+font_data = ExtResource( 3 )
+
+[sub_resource type="Animation" id=8]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AudioStreamPlayer:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "estatica"
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("AudioStreamPlayer:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="DynamicFont" id=10]
+size = 50
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.0431373, 0, 0, 1 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 120
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=33]
+size = 80
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=17]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="DynamicFont" id=18]
+size = 100
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=19]
+size = 100
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=20]
+size = 100
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=21]
+size = 50
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=22]
+size = 100
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=23]
+size = 100
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=24]
+size = 50
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=25]
+size = 100
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=26]
+size = 100
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=27]
+size = 50
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=28]
+size = 100
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=29]
+size = 100
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=30]
+size = 50
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=31]
+size = 100
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=32]
+size = 100
+font_data = ExtResource( 3 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Menu" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="initial" type="Control" parent="Menu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TextureRect" type="TextureRect" parent="Menu/initial"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = SubResource( 1 )
+expand = true
+stretch_mode = 7
+
+[node name="menustatic" type="TextureRect" parent="Menu/initial"]
+modulate = Color( 1, 1, 1, 0.117647 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = SubResource( 2 )
+expand = true
+stretch_mode = 7
+
+[node name="gameName" type="TextureRect" parent="Menu/initial"]
+anchor_left = 0.0333333
+anchor_top = 0.0592593
+anchor_right = 0.1625
+anchor_bottom = 0.338889
+texture = ExtResource( 15 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="bnt_new_game" type="Button" parent="Menu/initial"]
+anchor_left = 0.034375
+anchor_top = 0.414815
+anchor_right = 0.301042
+anchor_bottom = 0.534259
+rect_pivot_offset = Vector2( 248, 272 )
+focus_mode = 0
+custom_fonts/font = SubResource( 3 )
+enabled_focus_mode = 0
+text = "New Game"
+flat = true
+align = 0
+script = ExtResource( 5 )
+
+[node name="btn_continue" type="Button" parent="Menu/initial"]
+anchor_left = 0.034375
+anchor_top = 0.540741
+anchor_right = 0.301042
+anchor_bottom = 0.660185
+margin_right = -2.0
+rect_pivot_offset = Vector2( 248, 272 )
+focus_mode = 0
+custom_fonts/font = SubResource( 4 )
+disabled = true
+enabled_focus_mode = 0
+text = "Continue"
+flat = true
+align = 0
+script = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="Menu/initial/btn_continue"]
+anchor_top = 0.868217
+anchor_right = 0.875
+anchor_bottom = 1.24031
+custom_colors/font_color = Color( 0.596078, 0.596078, 0.596078, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "(Night 1)"
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="btn_extra_night" type="Button" parent="Menu/initial"]
+anchor_left = 0.034375
+anchor_top = 0.681481
+anchor_right = 0.303125
+anchor_bottom = 0.800926
+rect_pivot_offset = Vector2( 248, 272 )
+focus_mode = 0
+custom_fonts/font = SubResource( 6 )
+disabled = true
+enabled_focus_mode = 0
+text = "6th Night"
+flat = true
+align = 0
+script = ExtResource( 5 )
+
+[node name="btn_custom_night" type="Button" parent="Menu/initial"]
+anchor_left = 0.034375
+anchor_top = 0.8
+anchor_right = 0.390625
+anchor_bottom = 0.919444
+rect_pivot_offset = Vector2( 248, 272 )
+focus_mode = 0
+custom_fonts/font = SubResource( 7 )
+disabled = true
+enabled_focus_mode = 0
+text = "Custom Night"
+flat = true
+align = 0
+script = ExtResource( 5 )
+
+[node name="menu_cinematic" type="TextureRect" parent="Menu/initial"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = SubResource( 2 )
+expand = true
+stretch_mode = 7
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Menu/initial/menu_cinematic"]
+anims/RESET = SubResource( 8 )
+anims/estatica = SubResource( 9 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Menu/initial/menu_cinematic"]
+stream = ExtResource( 18 )
+volume_db = -15.0
+
+[node name="ResizeLabel" type="Label" parent="Menu/initial"]
+anchor_left = 0.758333
+anchor_top = 0.0222222
+anchor_right = 0.985937
+anchor_bottom = 0.102778
+custom_fonts/font = SubResource( 10 )
+text = "@KinGamesCreator
+V1.0.0 - 2023"
+align = 2
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="nightNumber" type="Panel" parent="Menu"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 11 )
+
+[node name="ResizeLabel" type="Label" parent="Menu/nightNumber"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_fonts/font = SubResource( 12 )
+text = "Night 1"
+align = 1
+valign = 1
+script = ExtResource( 6 )
+
+[node name="Timer" type="Timer" parent="Menu/nightNumber"]
+wait_time = 4.0
+one_shot = true
+
+[node name="ResizeLabel2" type="Label" parent="Menu/nightNumber"]
+anchor_left = 0.0208333
+anchor_top = 0.896296
+anchor_right = 0.179167
+anchor_bottom = 0.962963
+custom_fonts/font = SubResource( 33 )
+text = "Loading..."
+align = 1
+valign = 1
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="customNight" type="Panel" parent="Menu"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 17 )
+script = ExtResource( 2 )
+
+[node name="menustatic2" type="TextureRect" parent="Menu/customNight"]
+modulate = Color( 1, 1, 1, 0.117647 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = SubResource( 2 )
+expand = true
+stretch_mode = 7
+
+[node name="Label" type="Label" parent="Menu/customNight"]
+anchor_top = 0.0592593
+anchor_right = 1.0
+anchor_bottom = 0.177778
+custom_fonts/font = SubResource( 18 )
+text = "CUSTOM NIGHT"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="bonnie" type="AspectRatioContainer" parent="Menu/customNight"]
+anchor_left = 0.0416667
+anchor_top = 0.237037
+anchor_right = 0.2625
+anchor_bottom = 0.62963
+margin_right = 3.05176e-05
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="Menu/customNight/bonnie"]
+margin_top = 0.000259399
+margin_right = 424.0
+margin_bottom = 424.0
+
+[node name="ColorRect" type="ColorRect" parent="Menu/customNight/bonnie/ColorRect"]
+anchor_left = 0.0188679
+anchor_top = 0.0188679
+anchor_right = 0.981132
+anchor_bottom = 0.981132
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="TextureRect" type="TextureRect" parent="Menu/customNight/bonnie/ColorRect/ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 17 )
+expand = true
+
+[node name="chica" type="AspectRatioContainer" parent="Menu/customNight"]
+anchor_left = 0.275
+anchor_top = 0.237037
+anchor_right = 0.495833
+anchor_bottom = 0.62963
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="Menu/customNight/chica"]
+margin_top = 0.000534058
+margin_right = 423.999
+margin_bottom = 424.0
+
+[node name="ColorRect" type="ColorRect" parent="Menu/customNight/chica/ColorRect"]
+anchor_left = 0.0188679
+anchor_top = 0.0188679
+anchor_right = 0.981132
+anchor_bottom = 0.981132
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="TextureRect" type="TextureRect" parent="Menu/customNight/chica/ColorRect/ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 16 )
+expand = true
+
+[node name="foxy" type="AspectRatioContainer" parent="Menu/customNight"]
+anchor_left = 0.508333
+anchor_top = 0.237037
+anchor_right = 0.729167
+anchor_bottom = 0.62963
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="Menu/customNight/foxy"]
+margin_left = 0.00038147
+margin_right = 424.001
+margin_bottom = 424.0
+
+[node name="ColorRect" type="ColorRect" parent="Menu/customNight/foxy/ColorRect"]
+anchor_left = 0.0188679
+anchor_top = 0.0188679
+anchor_right = 0.981132
+anchor_bottom = 0.981132
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="TextureRect" type="TextureRect" parent="Menu/customNight/foxy/ColorRect/ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 20 )
+expand = true
+
+[node name="freddy" type="AspectRatioContainer" parent="Menu/customNight"]
+anchor_left = 0.741667
+anchor_top = 0.237037
+anchor_right = 0.9625
+anchor_bottom = 0.62963
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ColorRect" type="ColorRect" parent="Menu/customNight/freddy"]
+margin_top = 0.000534058
+margin_right = 423.999
+margin_bottom = 424.0
+
+[node name="ColorRect" type="ColorRect" parent="Menu/customNight/freddy/ColorRect"]
+anchor_left = 0.0188679
+anchor_top = 0.0188679
+anchor_right = 0.981132
+anchor_bottom = 0.981132
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="TextureRect" type="TextureRect" parent="Menu/customNight/freddy/ColorRect/ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 21 )
+expand = true
+
+[node name="bonnie_rest" type="Button" parent="Menu/customNight"]
+anchor_left = 0.0416667
+anchor_top = 0.696296
+anchor_right = 0.15
+anchor_bottom = 0.777778
+focus_mode = 0
+custom_fonts/font = SubResource( 19 )
+enabled_focus_mode = 0
+text = "-"
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="bonnie_sum" type="Button" parent="Menu/customNight"]
+anchor_left = 0.154167
+anchor_top = 0.696296
+anchor_right = 0.2625
+anchor_bottom = 0.777778
+margin_right = 3.05176e-05
+focus_mode = 0
+custom_fonts/font = SubResource( 20 )
+enabled_focus_mode = 0
+text = "+"
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="bonnie_text" type="Label" parent="Menu/customNight"]
+anchor_left = 0.0416667
+anchor_top = 0.637037
+anchor_right = 0.2625
+anchor_bottom = 0.688889
+margin_right = 3.05176e-05
+custom_fonts/font = SubResource( 21 )
+text = "IA: 2"
+align = 1
+valign = 1
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="chica_rest" type="Button" parent="Menu/customNight"]
+anchor_left = 0.275
+anchor_top = 0.696296
+anchor_right = 0.383333
+anchor_bottom = 0.777778
+focus_mode = 0
+custom_fonts/font = SubResource( 22 )
+enabled_focus_mode = 0
+text = "-"
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="chica_sum" type="Button" parent="Menu/customNight"]
+anchor_left = 0.3875
+anchor_top = 0.696296
+anchor_right = 0.495833
+anchor_bottom = 0.777778
+focus_mode = 0
+custom_fonts/font = SubResource( 23 )
+enabled_focus_mode = 0
+text = "+"
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="chica_text" type="Label" parent="Menu/customNight"]
+anchor_left = 0.275
+anchor_top = 0.637037
+anchor_right = 0.495833
+anchor_bottom = 0.688889
+custom_fonts/font = SubResource( 24 )
+text = "IA: 2"
+align = 1
+valign = 1
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="foxy_rest" type="Button" parent="Menu/customNight"]
+anchor_left = 0.508333
+anchor_top = 0.696296
+anchor_right = 0.616667
+anchor_bottom = 0.777778
+focus_mode = 0
+custom_fonts/font = SubResource( 25 )
+enabled_focus_mode = 0
+text = "-"
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="foxy_sum" type="Button" parent="Menu/customNight"]
+anchor_left = 0.620833
+anchor_top = 0.696296
+anchor_right = 0.729167
+anchor_bottom = 0.777778
+focus_mode = 0
+custom_fonts/font = SubResource( 26 )
+enabled_focus_mode = 0
+text = "+"
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="foxy_text" type="Label" parent="Menu/customNight"]
+anchor_left = 0.508333
+anchor_top = 0.637037
+anchor_right = 0.729167
+anchor_bottom = 0.688889
+custom_fonts/font = SubResource( 27 )
+text = "IA: 2"
+align = 1
+valign = 1
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="freddy_rest" type="Button" parent="Menu/customNight"]
+anchor_left = 0.741667
+anchor_top = 0.696296
+anchor_right = 0.85
+anchor_bottom = 0.777778
+focus_mode = 0
+custom_fonts/font = SubResource( 28 )
+enabled_focus_mode = 0
+text = "-"
+script = ExtResource( 5 )
+
+[node name="freddy_sum" type="Button" parent="Menu/customNight"]
+anchor_left = 0.854167
+anchor_top = 0.696296
+anchor_right = 0.9625
+anchor_bottom = 0.777778
+focus_mode = 0
+custom_fonts/font = SubResource( 29 )
+enabled_focus_mode = 0
+text = "+"
+script = ExtResource( 5 )
+
+[node name="freddy_text" type="Label" parent="Menu/customNight"]
+anchor_left = 0.741667
+anchor_top = 0.637037
+anchor_right = 0.9625
+anchor_bottom = 0.688889
+custom_fonts/font = SubResource( 30 )
+text = "IA: 2"
+align = 1
+valign = 1
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="return" type="Button" parent="Menu/customNight"]
+anchor_left = 0.0333333
+anchor_top = 0.82963
+anchor_right = 0.2
+anchor_bottom = 0.948148
+focus_mode = 0
+custom_fonts/font = SubResource( 31 )
+enabled_focus_mode = 0
+text = "RETURN"
+flat = true
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="play" type="Button" parent="Menu/customNight"]
+anchor_left = 0.8
+anchor_top = 0.82963
+anchor_right = 0.966667
+anchor_bottom = 0.948148
+focus_mode = 0
+custom_fonts/font = SubResource( 32 )
+enabled_focus_mode = 0
+text = "PLAY"
+flat = true
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 19 )
+volume_db = 8.0
+autoplay = true
+
+[connection signal="pressed" from="Menu/initial/bnt_new_game" to="Menu" method="new_game"]
+[connection signal="pressed" from="Menu/initial/btn_continue" to="Menu" method="continue_game"]
+[connection signal="pressed" from="Menu/initial/btn_extra_night" to="Menu" method="six_night"]
+[connection signal="pressed" from="Menu/initial/btn_custom_night" to="Menu" method="custom_night"]
+[connection signal="animation_finished" from="Menu/initial/menu_cinematic/AnimationPlayer" to="Menu" method="static_anim_finish"]
+[connection signal="timeout" from="Menu/nightNumber/Timer" to="Menu" method="intro_timeout"]
+[connection signal="pressed" from="Menu/customNight/bonnie_rest" to="Menu/customNight" method="bonnie_rest"]
+[connection signal="pressed" from="Menu/customNight/bonnie_sum" to="Menu/customNight" method="bonnie_sum"]
+[connection signal="pressed" from="Menu/customNight/chica_rest" to="Menu/customNight" method="chica_rest"]
+[connection signal="pressed" from="Menu/customNight/chica_sum" to="Menu/customNight" method="chica_sum"]
+[connection signal="pressed" from="Menu/customNight/foxy_rest" to="Menu/customNight" method="foxy_rest"]
+[connection signal="pressed" from="Menu/customNight/foxy_sum" to="Menu/customNight" method="foxy_sum"]
+[connection signal="pressed" from="Menu/customNight/freddy_rest" to="Menu/customNight" method="freddy_rest"]
+[connection signal="pressed" from="Menu/customNight/freddy_sum" to="Menu/customNight" method="freddy_sum"]
+[connection signal="pressed" from="Menu/customNight/return" to="Menu/customNight" method="returnButton"]
+[connection signal="pressed" from="Menu/customNight/play" to="Menu/customNight" method="startNight"]

@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/freddy-cameras.obj-36473d3e0bc22f7d8b99bc3e651e7b5f.mesh"
+
+[deps]
+
+files=[ "res://.import/freddy-cameras.obj-36473d3e0bc22f7d8b99bc3e651e7b5f.mesh" ]
+
+source_file="res://assets/models/animatronics/freddy/freddy-cameras.obj"
+dest_files=[ "res://.import/freddy-cameras.obj-36473d3e0bc22f7d8b99bc3e651e7b5f.mesh", "res://.import/freddy-cameras.obj-36473d3e0bc22f7d8b99bc3e651e7b5f.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

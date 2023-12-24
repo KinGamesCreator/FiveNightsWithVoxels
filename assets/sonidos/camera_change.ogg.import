@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/camera_change.ogg-00a1bc7badb88633e5f84e0bda43563e.oggstr"
+
+[deps]
+
+source_file="res://assets/sonidos/camera_change.ogg"
+dest_files=[ "res://.import/camera_change.ogg-00a1bc7badb88633e5f84e0bda43563e.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

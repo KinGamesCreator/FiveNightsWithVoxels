@@ -1,0 +1,20 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/cortinas-2.obj-ba3cf05e696dcb72755d78f336ab8b1a.mesh"
+
+[deps]
+
+files=[ "res://.import/cortinas-2.obj-ba3cf05e696dcb72755d78f336ab8b1a.mesh" ]
+
+source_file="res://assets/models/animatronics/foxy/cortinas-2.obj"
+dest_files=[ "res://.import/cortinas-2.obj-ba3cf05e696dcb72755d78f336ab8b1a.mesh", "res://.import/cortinas-2.obj-ba3cf05e696dcb72755d78f336ab8b1a.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+octahedral_compression=true
+optimize_mesh_flags=4286

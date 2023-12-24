@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/camera_sound.ogg-76ac8aa872b96d945f0d1aacbc9ac42b.oggstr"
+
+[deps]
+
+source_file="res://assets/sonidos/camera_sound.ogg"
+dest_files=[ "res://.import/camera_sound.ogg-76ac8aa872b96d945f0d1aacbc9ac42b.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

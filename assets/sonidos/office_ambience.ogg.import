@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/office_ambience.ogg-f2033e85335f31d34fc56448a0f5d58d.oggstr"
+
+[deps]
+
+source_file="res://assets/sonidos/office_ambience.ogg"
+dest_files=[ "res://.import/office_ambience.ogg-f2033e85335f31d34fc56448a0f5d58d.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
